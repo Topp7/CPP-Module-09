@@ -6,12 +6,12 @@
 #    By: stopp <stopp@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/13 17:55:12 by stopp             #+#    #+#              #
-#    Updated: 2025/01/20 11:54:20 by stopp            ###   ########.fr        #
+#    Updated: 2025/01/20 12:31:39 by stopp            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # Project name
-NAME := ex00
+NAME := btc
 
 # Define ANSI color codes
 GREEN := \033[0;32m
