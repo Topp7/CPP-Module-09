@@ -6,12 +6,12 @@
 #    By: stopp <stopp@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/13 17:55:12 by stopp             #+#    #+#              #
-#    Updated: 2025/01/17 18:23:51 by stopp            ###   ########.fr        #
+#    Updated: 2025/01/23 12:55:50 by stopp            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # Project name
-NAME := ex01
+NAME := RPN
 
 # Define ANSI color codes
 GREEN := \033[0;32m
@@ -26,7 +26,7 @@ CFLAGS := -Wall -Wextra -Werror -std=c++17
 # Directories and Files
 OBJDIR := obj
 SRC :=	src/main.cpp \
-		src/Span.cpp
+		src/RPN.cpp
 
 OBJ := $(SRC:%.cpp=$(OBJDIR)/%.o)
 
