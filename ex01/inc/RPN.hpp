@@ -6,7 +6,7 @@
 /*   By: stopp <stopp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 12:55:52 by stopp             #+#    #+#             */
-/*   Updated: 2025/01/23 13:12:56 by stopp            ###   ########.fr       */
+/*   Updated: 2025/01/27 14:20:19 by stopp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 #include <stack>
 #include <algorithm>
 #include <string>
+#include <sstream>
+#include <cctype>
 #include <exception>
 
 class RPN
