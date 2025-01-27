@@ -6,12 +6,12 @@
 #    By: stopp <stopp@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/13 17:55:12 by stopp             #+#    #+#              #
-#    Updated: 2025/01/15 16:00:00 by stopp            ###   ########.fr        #
+#    Updated: 2025/01/27 15:09:28 by stopp            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # Project name
-NAME := ex02
+NAME := PmergeMe
 
 # Define ANSI color codes
 GREEN := \033[0;32m
