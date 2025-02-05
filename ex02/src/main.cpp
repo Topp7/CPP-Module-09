@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: soren <soren@student.42.fr>                +#+  +:+       +#+        */
+/*   By: stopp <stopp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 10:59:56 by soren             #+#    #+#             */
-/*   Updated: 2025/02/03 11:07:19 by soren            ###   ########.fr       */
+/*   Updated: 2025/02/05 17:57:29 by stopp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,7 @@ int main(int argc, char **argv)
 		std::cerr << "Invalid amount of Arguments!" << std::endl;
 		return (1);
 	}
-
+	PmergeVector vec;
+	vec.getInts(argv);
+	vec.printInts();
 }
