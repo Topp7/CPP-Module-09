@@ -6,7 +6,7 @@
 /*   By: stopp <stopp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 10:59:56 by soren             #+#    #+#             */
-/*   Updated: 2025/02/05 17:57:29 by stopp            ###   ########.fr       */
+/*   Updated: 2025/02/06 16:13:59 by stopp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ int main(int argc, char **argv)
 	}
 	PmergeVector vec;
 	vec.getInts(argv);
-	vec.printInts();
+	vec.FJA_vec();
 }
