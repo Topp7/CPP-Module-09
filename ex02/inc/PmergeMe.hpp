@@ -6,7 +6,7 @@
 /*   By: stopp <stopp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 11:07:22 by soren             #+#    #+#             */
-/*   Updated: 2025/02/06 14:26:03 by stopp            ###   ########.fr       */
+/*   Updated: 2025/02/18 14:55:12 by stopp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ class PmergeVector : public FJA_I
 {
 	private:
 		std::vector<int>	_dataVec;
-		std::vector<int>	_mainChain;
+		std::vector<int>	_main;
 		std::vector<int>	_pend;
 		int					_vecSize;
 
@@ -51,4 +51,5 @@ class PmergeVector : public FJA_I
 		void	mergeSort(int elemSize, std::vector<int>::iterator start, std::vector<int>::iterator end) override;
 		void	sortElem(std::vector<int>::iterator first, std::vector<int>::iterator second, int elemSize) override;
 		void	FJA_vec();
+		void	insertion(int elemSize);
 };

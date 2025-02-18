@@ -6,7 +6,7 @@
 /*   By: stopp <stopp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 14:08:39 by stopp             #+#    #+#             */
-/*   Updated: 2025/02/06 16:40:09 by stopp            ###   ########.fr       */
+/*   Updated: 2025/02/18 16:27:06 by stopp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,24 @@ void	PmergeVector::mergeSort(int elemSize, std::vector<int>::iterator start, std
 	printInts();
 	std::cout << std::endl;
 	this->mergeSort(elemSize * 2, this->_dataVec.begin(), this->_dataVec.end());
+	if (elemSize * 3 < _dataVec.size())
+	{
+		insertion(elemSize);
+		container_cleanup();
+	}
 	return;
+}
+
+void	PmergeVector::insertion(int elemSize)
+{
+	elemSize = elemSize / 2;
+	for (int i = 0; (i * elemSize) + elemSize < _dataVec.size(); i++)
+	{
+		if (i == 0 || i % 2 == 1)
+			std::copy(_dataVec.begin() + (i * elemSize), _dataVec.begin() + (i * elemSize) + elemSize, std::back_inserter(_main));
+		else
+			std::copy(_dataVec.begin() + (i * elemSize), _dataVec.begin() + (i * elemSize) + elemSize, std::back_inserter(_pend));
+	}
 }
 
 void	PmergeVector::FJA_vec()
