@@ -6,7 +6,7 @@
 /*   By: stopp <stopp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 14:08:39 by stopp             #+#    #+#             */
-/*   Updated: 2025/02/18 16:27:06 by stopp            ###   ########.fr       */
+/*   Updated: 2025/02/24 16:31:05 by stopp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ PmergeVector &PmergeVector::operator=(const PmergeVector &copy)
 	if (this != &copy)
 	{
 		this->_dataVec = copy._dataVec;
-		this->_mainChain = copy._mainChain;
+		this->_main = copy._main;
 		this->_pend = copy._pend;
 	}
 	return (*this);
@@ -93,13 +93,24 @@ void	PmergeVector::mergeSort(int elemSize, std::vector<int>::iterator start, std
 void	PmergeVector::insertion(int elemSize)
 {
 	elemSize = elemSize / 2;
-	for (int i = 0; (i * elemSize) + elemSize < _dataVec.size(); i++)
+	int	i = 0;
+	while (elemSize <= _dataVec.size())
 	{
 		if (i == 0 || i % 2 == 1)
-			std::copy(_dataVec.begin() + (i * elemSize), _dataVec.begin() + (i * elemSize) + elemSize, std::back_inserter(_main));
+			std::copy(_dataVec.begin(), _dataVec.begin() + elemSize, std::back_inserter(_main));
 		else
-			std::copy(_dataVec.begin() + (i * elemSize), _dataVec.begin() + (i * elemSize) + elemSize, std::back_inserter(_pend));
+			std::copy(_dataVec.begin(), _dataVec.begin() + elemSize, std::back_inserter(_pend));
+		_dataVec.erase(_dataVec.begin(), _dataVec.begin() + elemSize);
+		i++;
 	}
+
+	binary_insert(elemSize);
+}
+
+void	PmergeVector::binary_insert(int elemSize)
+{
+	Jacobsthal Jacob;
+	int	pend
 }
 
 void	PmergeVector::FJA_vec()

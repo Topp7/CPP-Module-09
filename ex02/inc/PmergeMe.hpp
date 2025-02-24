@@ -6,7 +6,7 @@
 /*   By: stopp <stopp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 11:07:22 by soren             #+#    #+#             */
-/*   Updated: 2025/02/18 14:55:12 by stopp            ###   ########.fr       */
+/*   Updated: 2025/02/24 15:34:37 by stopp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #include <climits>
 #include <ctime>
 #include <exception>
+#include "Jacobsthal.hpp"
 
 class FJA_I
 {
@@ -30,7 +31,6 @@ class FJA_I
 		// virtual void	merge() = 0;
 
 };
-
 
 class PmergeVector : public FJA_I
 {
@@ -52,4 +52,5 @@ class PmergeVector : public FJA_I
 		void	sortElem(std::vector<int>::iterator first, std::vector<int>::iterator second, int elemSize) override;
 		void	FJA_vec();
 		void	insertion(int elemSize);
+		void	binary_insert(int elemSize);
 };
