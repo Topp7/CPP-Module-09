@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PmergeMe.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stopp <stopp@student.42.fr>                +#+  +:+       +#+        */
+/*   By: soren <soren@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 14:08:39 by stopp             #+#    #+#             */
-/*   Updated: 2025/02/24 16:31:05 by stopp            ###   ########.fr       */
+/*   Updated: 2025/02/26 14:02:05 by soren            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,14 +103,21 @@ void	PmergeVector::insertion(int elemSize)
 		_dataVec.erase(_dataVec.begin(), _dataVec.begin() + elemSize);
 		i++;
 	}
-
-	binary_insert(elemSize);
+	if (i > 6)
+		binary_insert(elemSize);
+	else
+		ordered_insert(elemSize);
 }
 
 void	PmergeVector::binary_insert(int elemSize)
 {
-	Jacobsthal Jacob;
-	int	pend
+	Jacobsthal Jac;
+	int	pend = 0;
+
+	std::vector<int>::iterator it_pend = _pend.begin() + (elemSize * (Jac.get_curr() - Jac.get_prev()) - 1);
+	std::vector<int>::iterator it_main = _main.begin() + elemSize - 1;
+
+	
 }
 
 void	PmergeVector::FJA_vec()

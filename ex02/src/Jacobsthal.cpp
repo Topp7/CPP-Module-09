@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Jacobsthal.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stopp <stopp@student.42.fr>                +#+  +:+       +#+        */
+/*   By: soren <soren@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 15:09:40 by stopp             #+#    #+#             */
-/*   Updated: 2025/02/24 15:33:40 by stopp            ###   ########.fr       */
+/*   Updated: 2025/02/26 13:59:51 by soren            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,13 @@ void	Jacobsthal::calc_next(void)
 	size_t tmp = (2 * _a) + _b;
 	_a = _b;
 	_b = tmp;
+}
+size_t	Jacobsthal::get_curr()
+{
+	return _b;
+}
+
+size_t	Jacobsthal::get_prev()
+{
+	return _a;
 }

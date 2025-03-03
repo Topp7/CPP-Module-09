@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Jacobsthal.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stopp <stopp@student.42.fr>                +#+  +:+       +#+        */
+/*   By: soren <soren@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 15:05:40 by stopp             #+#    #+#             */
-/*   Updated: 2025/02/24 15:35:25 by stopp            ###   ########.fr       */
+/*   Updated: 2025/02/26 13:59:38 by soren            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ class Jacobsthal
 		Jacobsthal(const Jacobsthal &copy);
 		Jacobsthal &operator=(const Jacobsthal &copy);
 		~Jacobsthal();
-		
+
 		void	calc_next(void);
+		size_t	get_curr();
+		size_t	get_prev();
 };
