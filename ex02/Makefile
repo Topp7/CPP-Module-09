@@ -6,7 +6,7 @@
 #    By: stopp <stopp@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/13 17:55:12 by stopp             #+#    #+#              #
-#    Updated: 2025/02/05 17:52:41 by stopp            ###   ########.fr        #
+#    Updated: 2025/03/06 18:00:39 by stopp            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,7 @@ CFLAGS := -Wall -Wextra -Werror -std=c++17
 OBJDIR := obj
 SRC :=	src/main.cpp \
 		src/PmergeMe.cpp \
+		src/Jacobsthal.cpp \
 
 OBJ := $(SRC:%.cpp=$(OBJDIR)/%.o)
 
